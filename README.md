@@ -8,3 +8,4 @@ Exercises from the book https://pragprog.com/book/7lang/seven-more-languages-in-
  * [RTM](http://www.lua.org/manual/)
  * [Wiki with code samples](http://lua-users.org/wiki/SampleCode)
  * [Luarocks package manager](https://rocks.moonscript.org/)
+ * [List of metatable events](http://lua-users.org/wiki/MetatableEvents)
