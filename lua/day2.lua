@@ -32,7 +32,7 @@ function strict_read(table, key)
 end
 
 function strict_write(table, key, value)
-  if _private[key] then
+  if value and _private[key] then
     error("Duplicate key: " .. key)
   else
     _private[key] = value
@@ -45,11 +45,12 @@ local mt = {
 }
 
 local treasure = {}
--- setmetatable(treasure, mt)
--- treasure.gold = 200
--- print(table_to_string(treasure))
--- treasure.gold = nil
--- print(table_to_string(treasure))
+setmetatable(treasure, mt)
+print('call')
+treasure.gold = 200
+print('treasure should be 200', treasure.gold)
+treasure.gold = nil
+-- gold is not anymore there
 
 global_mt = {
   __newindex = function(t, k, v)
